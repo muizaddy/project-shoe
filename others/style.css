@@ -173,6 +173,7 @@ cursor: pointer;
 .card p {
   color: #777;
 }
+
 .section .container .cards .card {
   width: 100%;
   display: flex;
@@ -191,7 +192,27 @@ cursor: pointer;
   text-align: center;
   margin-top: 10px;
   width: 40%;
+  font-weight: bold;
+  border: 2px #890d0d solid;
 }
+
+.section .container .cards .card p.best:hover{
+  color: #890d0d;
+  background-color: #fff;
+  animation-name: myani;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  border: 2px #890d0d solid;
+  font-weight: bold;
+
+}
+@keyframes myani{
+  0%{ opacity: 0;}
+  100%{ opacity: 1;}
+}
+
+
+
 
 .price {
   display: flex;
