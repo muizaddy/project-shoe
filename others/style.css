@@ -3,12 +3,12 @@
   margin: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: #fff;
   font-size: 15px;
 }
-
 
 /* NAVBAR STYLING */
 
@@ -19,7 +19,7 @@ body {
   padding: 15px;
 }
 
-.navbar a {
+.navbar .tabs a {
   float: left;
   display: block;
   color: #fdfffd;
@@ -28,56 +28,78 @@ body {
   text-decoration: none;
 }
 
-
-
-
 .navbar .tabs a:hover{
-  background-color: #890d0d;
-  color: #fdfffd;
-  font-size: 16px;
- 
+  color: #890d0d;
+}
+
+.container .user_account ul li:last-child{
+border: none;
+margin-left: 10px;
+}
+.container .user_account ul li a i:hover{
+border: none;
 }
 
 
 .navbar a.active {
-  background-color: #890d0d;
-  color: #fdfffd;
+  color: #890d0d;
 }
 
 .navbar .container{
-  display: flex;
+display: flex;
 justify-content: space-between;
 align-items: center;
 height: 60%;
+width: 100%;
+}
+
+.navbar .container .logo{
+  margin-right: 20px;
 }
 
 .navbar .container .tabs{
-  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+height: 100%;
 }
 
+.navbar .container .tabs i{
+  margin-left: 5px;
+}
 
+.navbar .container .tabs input[type="search"]{
+  height: 90%;
+  display: flex;
+  padding: 20px 30px;
+  border-radius: 25px;
+  border: none;
+  width: 35%;
+  margin: auto 10px;
+
+}
 
 .user_account .user{
-  list-style-type: none;
-  display: flex;
- height: 100%;
+list-style-type: none;
+display: flex;
+height: 100%;
 
 }
 .user_account .user li{
-
-   color: #fff;
-  border: 2px solid #fff;
-  margin-left: 10px;
+color: #fff;
+border: 2px solid #fff;
+margin-left: 10px;
 }
 
 .user_account .user li a{
-  padding: 10px;
+  padding: 20px;
   text-decoration: none;
+  color: #fff;
 }
 .user_account .user li a:hover{
-  color: #ff0000;
- font-size: 16px;
-  padding: 10px 15px;
+color: #890d0d; 
+border-color:  #890d0d;
+
 }
 
 /* BUTTON STYLING */
@@ -125,7 +147,7 @@ height: 60%;
   overflow: hidden;
   padding: 30px;
   margin-bottom: 10px;
-  background: url('./IMG/box.jpg') no-repeat center center/cover;
+  background: url('./IMG/WHITE\ SHOE.jpg') no-repeat center center/cover;
   height: 800px;
   width: 100%;
   display: flex;
@@ -183,6 +205,12 @@ cursor: pointer;
 .section .container .cards .card img {
   margin-bottom: 5px;
   width:300px;
+  transition: transform 0.3s ease-in-out;
+
+}
+
+.section .container .cards .card img:hover{
+  transform: scale(1.05)
 }
 
 .section .container .cards .card p.best {
@@ -196,27 +224,9 @@ cursor: pointer;
   border: 2px #890d0d solid;
 }
 
-.section .container .cards .card p.best:hover{
-  color: #890d0d;
-  background-color: #fff;
-  animation-name: myani;
-  animation-fill-mode: forwards;
-  animation-duration: 1s;
-  border: 2px #890d0d solid;
-  font-weight: bold;
-
-}
-@keyframes myani{
-  0%{ opacity: 0;}
-  100%{ opacity: 1;}
-}
-
-
-
 
 .price {
   display: flex;
-
   align-items: center;
 }
 .price .current_price {
@@ -233,4 +243,9 @@ p.name{
   font-size: 13px;
   color: #777;
   line-height: 1.1;
+}
+
+
+@media (max-width:760px) {
+  
 }
