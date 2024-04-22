@@ -8,14 +8,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
   </head>
   <body>
+<div class="menu-btn">
+  <i class="fa-solid fa-bars fa-2x"></i>
+</div>
     <nav class="navbar">
       <div class="container">
+     
         <div class="logo"><img src="./others/IMG/logo.png" alt="logo" width="70px"></div>
         <div class="tabs">
           <a class="active" href="index.html">Home</i></a>
           <a href="./others/categories.html">Categories<i class="fa-solid fa-caret-down"></i></a>
-        <input type="search" placeholder="Search">
-        <a href="./others/release.html">New Releases</a>
 
         <a href="./others/faq.html">FAQ</a>
         <a href="./others/contact.html">Contact</a>
@@ -24,7 +26,7 @@
             <ul class="user">
    <li><a href="#">Log in</a></li>
    <li><a href="#">Sign up</a></li>
-   <li><a href="#"><i class="fa-solid fa-cart-shopping fa-2x"></i></a></p>
+   <li><a href="#"><i class="fa-solid fa-cart-shopping fa-1.5x"></i></a></p>
     
     </div>
     </ul>
@@ -36,10 +38,9 @@
     <header class="hero">
       <div class="container">     
           <div class="content">
-          <h1>What's New About Our Products</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta doloribus reprehenderit distinctio quia aliquid ab ex. Facilis voluptatum recusandae nam eius maxime expedita culpa ullam perspiciatis magni distinctio incidunt quidem, error exercitationem. Vel alias odio repellendus quis ut, ipsam omnis excepturi sequi at minus culpa recusandae deserunt id nihil earum!</p>
+          <input type="search" name="search" id="search">
+           <button type="submit" class="btn">Request a demo</button>
         </div>
-         <button type="submit" class="btn">Request a demo</button>
       </div>
     </header>
 
@@ -98,5 +99,8 @@
         </div>
       </div>
     </section>
+    <script>
+      document.querySelector('.menu-btn').addEventListener('click', () => document.querySelector('.tabs').classList.toggle('show'))
+    </script>
   </body>
 </html>
